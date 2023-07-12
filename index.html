@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <script src="javascript.js" type="text/javascript" defer></script>
+    <link href="estilos.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <img src="./img/logo.png" alt="Logo Pokédex">
+            <ul class="nav-list">
+                <li class="nav-item"><button class="btn btn-header" id="ver-todos">Ver todos</button></li> 
+                <li class="nav-item"><button class="btn btn-header normal" id="normal">Normal</button></li>
+                <li class="nav-item"><button class="btn btn-header fire" id="fire">fire</button></li>
+                <li class="nav-item"><button class="btn btn-header water" id="water">water</button></li>
+                <li class="nav-item"><button class="btn btn-header grass" id="grass">grass</button></li>
+                <li class="nav-item"><button class="btn btn-header electric" id="electric">electric</button></li>
+                <li class="nav-item"><button class="btn btn-header ice" id="ice">ice</button></li>
+                <li class="nav-item"><button class="btn btn-header fighting" id="fighting">fighting</button></li>
+                <li class="nav-item"><button class="btn btn-header poison" id="poison">poison</button></li>
+                <li class="nav-item"><button class="btn btn-header ground" id="ground">ground</button></li>
+                <li class="nav-item"><button class="btn btn-header flying" id="flying">flying</button></li>
+                <li class="nav-item"><button class="btn btn-header psychic" id="psychic">psychic</button></li>
+                <li class="nav-item"><button class="btn btn-header bug" id="bug">bug</button></li>
+                <li class="nav-item"><button class="btn btn-header rock" id="rock">rock</button></li>
+                <li class="nav-item"><button class="btn btn-header ghost" id="ghost">ghost</button></li>
+                <li class="nav-item"><button class="btn btn-header dark" id="dark">dark</button></li>
+                <li class="nav-item"><button class="btn btn-header dragon" id="dragon">Dragon</button></li>
+                <li class="nav-item"><button class="btn btn-header steel" id="steel">steel</button></li>
+                <li class="nav-item"><button class="btn btn-header fairy" id="fairy">fairy</button></li>
+            </ul>
+        </nav>
+        <div>
+            <form id="buscarPokemon" action="" onsubmit="buscaPokemon(event)">
+                <input type="text" name="pokemon" autocomplete="off">
+                <button type="submit" id="buscar">buscar</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div id="todos">
+            <div class="pokemon-todos" id="listaPokemon">
+            </div>
+        </div>
+    </main>
+    <div id="modal" class="modalCard">
+        <div id="modalContent">
+            <div class="pokemon-imagen">
+                <img id = "pokefotoModal"src="https://i.ebayimg.com/images/g/qBEAAOSwuFlj78ti/s-l1600.jpg" alt="imagenPokemon">
+            </div>
+            <div class="pokeData">
+                <div class="identificar">
+                    <p id="pkIdModal" class="pokemon-id-modal">25</p>
+                    <h2 id="pkNombreModal" class="pokemon-nombre">pikachu</h2>
+                </div>
+                <div class="pokemon-tipos">
+                    <p id="pkTipoModal" class="type-modal">Electric</p>
+                </div>
+                <div class="pokemon-stats-modal">
+                    <p id="hp" class="stats-modal">HP: 35</p>
+                    <p id="ataque" class="stats-modal">Attack: 55</p>
+                    <p id="defensa" class="stats-modal">Defense: 40</p>
+                    <p id="specAt" class="stats-modal">special-attack: 50</p>
+                    <p id="specDf" class="stats-modal">special-defense: 50</p>
+                    <p id="velocidad" class="stats-modal">Speed: 90</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
